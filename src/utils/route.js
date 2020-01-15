@@ -5,6 +5,13 @@ const getRoutePaths = () => {
   return routePaths;
 };
 
+const getRoutePathKeys = () => {
+  const routePaths = getRoutePaths();
+  const routePathKeys = Object.keys(routePaths);
+  return routePathKeys;
+};
+
 export default Object.freeze({
-  getRoutePaths
+  getRoutePaths,
+  getRoutePathKeys
 });

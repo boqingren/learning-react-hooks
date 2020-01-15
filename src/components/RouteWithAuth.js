@@ -3,7 +3,6 @@ import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Loading from "./Loading";
 import ErrorBoundary from "./ErrorBoundary";
 import utils from "../utils";
-import configs from "../configs";
 
 const RouteWithAuth = () => {
   const getRoutePathKeys = () => {
@@ -41,7 +40,6 @@ const RouteWithAuth = () => {
   };
 
   const handleRouteRender = (routeProps, key) => {
-    console.log("configs:", configs);
     const routePaths = utils.route.getRoutePaths();
     const { isNeedLogin } = routePaths[key];
     if (!isNeedLogin) return renderPage(routeProps, key);

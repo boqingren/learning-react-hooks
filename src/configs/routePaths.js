@@ -1,8 +1,6 @@
 import pageAuths from "./pageAuths";
 import commonUtils from "../utils/common";
 
-// console.log("utils:", utils);
-
 const routePaths = {
   root: {
     path: "/",
