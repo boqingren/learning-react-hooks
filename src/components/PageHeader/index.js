@@ -1,10 +1,11 @@
 import React from "react";
+import HeaderWarp from "./style/HeaderWarp";
 
 const PageHeader = React.memo(props => {
   return (
-    <div style={{ textAlign: "left" }}>
-      {props.text}
-    </div>
+    <HeaderWarp>
+      {props.children}
+    </HeaderWarp>
   );
 });
 

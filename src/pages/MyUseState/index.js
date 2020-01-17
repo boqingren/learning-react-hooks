@@ -1,13 +1,5 @@
 import React, { Fragment, useState } from "react";
-import Widget from "../../widget"
-
-const Title = React.memo(props => {
-  return (
-    <div style={{ textAlign: "left" }}>
-      {props.text}
-    </div>
-  );
-});
+import { PageHeader } from "../../components"
 
 // const [count, setCount] = useState(0);
 
@@ -22,9 +14,9 @@ const Counter = React.memo(props => {
 const MyUseState = React.memo(props => {
   return (
     <Fragment>
-      <Widget.HeaderWarp>
-        <Title text="MyUseState" />
-      </Widget.HeaderWarp>
+      <PageHeader>
+        MyUseState
+      </PageHeader>
     </Fragment>
   );
 });
