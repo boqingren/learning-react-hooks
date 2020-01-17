@@ -1,8 +1,8 @@
 import * as React from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
-import Loading from "./Loading";
-import ErrorBoundary from "./ErrorBoundary";
-import utils from "../utils";
+import Loading from "../Loading";
+import ErrorBoundary from "../ErrorBoundary";
+import utils from "../../utils";
 
 const RouteWithAuth = () => {
   const getRoutePathKeys = () => {
@@ -18,7 +18,7 @@ const RouteWithAuth = () => {
   const renderPage = (routeProps, key) => {
     const routePaths = utils.route.getRoutePaths();
     try {
-      const Page = React.lazy(() => import(`../pages/${routePaths[key].pageName}`));
+      const Page = React.lazy(() => import(`../../pages/${routePaths[key].pageName}`));
       return <Page {...routeProps} />;
     } catch (error) {
       return renderNotFound();

@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import Widget from "../../widget"
 
 const Title = React.memo(props => {
   return (
@@ -19,10 +20,11 @@ const Counter = React.memo(props => {
 });
 
 const MyUseState = React.memo(props => {
-
   return (
     <Fragment>
-      <Title text="MyUseState" />
+      <Widget.HeaderWarp>
+        <Title text="MyUseState" />
+      </Widget.HeaderWarp>
     </Fragment>
   );
 });
