@@ -4,6 +4,9 @@ const pageAuths = Object.freeze([{
 }, {
   pageName: "MyUseState",
   isNeedLogin: false
+}, {
+  pageName: "Iframe",
+  isNeedLogin: false
 }]);
 
 export default pageAuths;
